@@ -75,7 +75,7 @@ const server = http.createServer((req, res) => {
     const output = tempOverview.replace('{%PRODUCT_CARDS%}', cardsHtml);
     res.end(output);
     // Product page
-  } else if (pathname === '/product') {
+  } else if (pathname === '/product' && query?.id) {
     res.writeHead(200, {
       'Content-type': 'text/html',
     });
